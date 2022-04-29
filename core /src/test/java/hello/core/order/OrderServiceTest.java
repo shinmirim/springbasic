@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class OrderServiceTest {
 
     MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
     //VIP의 경우 천원 할인이 되는지 테스트
 
     @Test

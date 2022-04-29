@@ -13,7 +13,7 @@ public class OrderApp {
     public static void main(String[] args) {
 
         MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        OrderService orderService = new OrderServiceImpl(memberRepository, discountPolicy);
 
         //member 저장 모르겠음
         Long memberId = 1L;
